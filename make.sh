@@ -87,6 +87,7 @@ mkdir -p "$systemdir"
 if [ "$sourcetype" == "Aonly" ]; then
     echo "Warning: Aonly source detected, using P AOSP ramdisk"
     cd "$systemdir"
+    mkdir system
     tar xf "$prebuiltdir/ABrootDir.tar"
     cd "$LOCALDIR"
     echo "Making copy of source rom to temp"
